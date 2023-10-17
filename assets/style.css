@@ -97,7 +97,7 @@ h4 {
 /* ==================== Common ==================== */
 
 .container {
-    min-width: 1280px;
+    max-width: 1280px;
     margin: 0px auto;
     padding: 0 0 0.938em;
 }
@@ -159,7 +159,11 @@ h4 {
 
 .icon-large {
     font-size: 1.75em;
-    margin: 0 0.75em 0 0;
+    margin-right: 0.75em;
+}
+
+.mobile-hide {
+    display: none;
 }
 
 
@@ -214,6 +218,12 @@ header>li>a {
 
 
 /* ========== Header - Header Nav =========== */
+
+.header-nav {
+    padding: 1em 0;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid var(--border-color);
+}
 
 .trigger {
     font-size: 1.5em;
@@ -283,11 +293,43 @@ nav .fly-item {
     background-color: var(--primary-color);
 }
 
+.header-nav .right {
+    position: relative;
+    margin-left: auto;
+}
+
+.header-nav .right .icon-large {
+    position: relative;
+}
+
+.header-nav .right .fly-item {
+    top: 0;
+    right: 0;
+    width: 16px;
+    background-color: var(--secondary-dark-color);
+    border-radius: var(--percent50);
+}
+
 @media screen and (min-width: 992px) {
     .container {
         padding: 0 2em;
     }
     .desktop-hide {
         display: none;
+    }
+    .mobile-hide {
+        display: block;
+    }
+    /* .logo a {
+        margin-right: 2em;
+    }
+    .header-nav {
+        padding: 0;
+        margin: 0;
+        border-bottom: 0;
+    } */
+    .header-nav .right li  {
+        /* display: inline-block; */
+        margin-left: 1em;
     }
 }
